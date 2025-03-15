@@ -3,13 +3,14 @@
 """
 Archivo principal: orquesta la ejecución del juego.
 """
-
+#Lo primero que hacemos es importar las librerias y los datos de nuestros demás archivos .py
 from clases import *
 from historia import Historia
 from fun_auxiliares import *
 from termcolor import *
 from pyfiglet import *
 
+#Luego definimos nuestra función principal, que será la que haga inicialice el juego.
 def main():
     ancho = ancho_terminal()
 
@@ -20,7 +21,7 @@ def main():
     
     nombre = input("Ingresa tu nombre: ")
     player = Player(nombre)  # Se crea una única vez
-    
+ 
     while True:
         confirmar1 =input("\n¿Estás seguro de querer adentrarte en esta pesadilla? (sí/no): ").strip().lower()
         confirmar=normalizar_entrada(confirmar1)
@@ -33,6 +34,7 @@ def main():
         else:
             print("Responde solo 'sí' o 'no'.")
 
+#En esta parte de la función, se llama a la clase historia, que se encuentra en nuestro archivo historia.py, para que empiece a surgir la narrativa de la historia, junto con las decisiones del usuario.
     historia = Historia()
     escenario_actual = "inicio"
 

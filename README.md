@@ -1,3 +1,4 @@
+# ATENCION: ESTA ES UNA DEMO DEL JUEGO, LA VERSIÓN 0.1 SALDRA EL 18 DE MARZO DEL 2025.
 # Demo de Juego de Supervivencia de terror.
 
 ## Descripción
@@ -5,7 +6,8 @@ Un juego de terror donde el jugador debe tomar decisiones para sobrevivir en un 
 
 ## Requisitos
 
-Asegúrate de tener Python 3.x instalado y las dependencias requeridas.
+Asegúrate de tener Python 3.12.4
+instalado y las dependencias requeridas.
 
 ### Instalación
 

@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-Archivo de clases para el juego de terror.
-Contiene las definiciones de clases como Player y Game.
-"""
+#Este archivo contiene las definiciones de clases diferentes a la clase Historia, las clases encontradas aquí serán utilizadas principalmente para describir objetos, el jugador o NPC que se puedan implementar.
 
+#Esta clase implemente los atributos que puede llegar a tener el jugador, primero sus atributos iniciales y después funciones que puedan subir esos atributos, como aún no se define alguna otra clase que use los atributos, de momento el jugador es el unico que tiene éstos y se colocaron dentro de su clase.
 class Player:
     def __init__(self, name):
         self.name = name
