@@ -9,16 +9,31 @@ from historia import Historia
 from fun_auxiliares import *
 from termcolor import *
 from pyfiglet import *
+import pygame
+import time
 
 #Luego definimos nuestra función principal, que será la que haga inicialice el juego.
 def main():
     ancho = ancho_terminal()
+    limpiar_pantalla()
+ 
+    pygame.mixer.init()
+    sonido_fondo()
 
-    print("\n" + "=" * ancho)
-    texto_grande("Bienvenido al juego de terror, donde probaremos tus métodos de supervivencia en una situación extrema y desconocida.")
-    texto_grande("¿Podras sobrevivir?")
-    print("=" * ancho + "\n" )
+    print("\n")
+    texto_bloody("El enigma de la estridencia")
+    print("\n" )
+
+    time.sleep(3)
+
+    texto_mediano("Bienvenido al juego") 
+    time.sleep(2)
+    texto_mediano("¿Estas listo para vivir")
+    time.sleep(2)
+    texto_mediano("esta experiencia de terror")
     
+    time.sleep(1)
+
     nombre = input("Ingresa tu nombre: ")
     player = Player(nombre)  # Se crea una única vez
  
@@ -35,6 +50,11 @@ def main():
             print("Responde solo 'sí' o 'no'.")
 
 #En esta parte de la función, se llama a la clase historia, que se encuentra en nuestro archivo historia.py, para que empiece a surgir la narrativa de la historia, junto con las decisiones del usuario.
+    
+    limpiar_pantalla()
+
+    sonido_mar()
+
     historia = Historia()
     escenario_actual = "inicio"
 

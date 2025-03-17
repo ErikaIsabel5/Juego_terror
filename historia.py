@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 #Este archivo .py contiene todas las narrativas y decisiones que el usuario puede elegir, así como los diferentes caminos.
 
+from fun_auxiliares import *
+
+
 #Aquí, la hisotira va a estar contenida dentro de una clase, en esa clase, cada una de las opciones que el usuario elige, junto con su narrativa, va a estar guardada en un diccionario, esto con la finalidad de mejorar y acomodar las decisiones obtenidas.
 class Historia:
     def __init__(self):
@@ -125,12 +128,13 @@ class Historia:
 
 #Cuando los diccionarios de cada decisión se hayan terminado, se procede con la función mostrar_escenario, la cual será la responsable de tomar la elección que el usuario le indique para proseguir con la historia, mostrando los escenarios adecuados y siguiendo con la historia de acuerdo a las decisiones
     def mostrar_escenario(self, nombre_escenario):
+        ancho = ancho_terminal()
         escenario = self.escenarios.get(nombre_escenario)
         if escenario:
-            print("\n" + "=" * 50)
+            print("\n" + "=" * ancho)
             for linea in escenario["texto"]:
                 print(linea)
-            print("=" * 50 + "\n")
+            print("=" * ancho + "\n")
 
             opciones_legibles = {key: opcion.replace("_", " ") for key, opcion in escenario.get("opciones", {}).items()}
 
