@@ -1,16 +1,16 @@
-#El enigma de la estridencia.
+# El enigma de la estridencia.
 
-##Autora: Erika Isabel Castillo Santiago
+## Autora: Erika Isabel Castillo Santiago
 
 Verión 0.1 del juego.
 
-#Descripción
+# Descripción
 
 Un juego de terror donde el jugador debe tomar decisiones para sobrevivir en un entorno desconocido.
 
 ## Requisitos
 
-####Python
+#### Python
 
 Asegúrate de tener Python 3.8 o superior instalado.
 
@@ -26,7 +26,7 @@ python --versión
 
 Si no tienes Python instalado, descárgalo desde python.org.
 
-####pip
+#### pip
 
 Asegurate de tener instalado pip en tu sistema.
 
