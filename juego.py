@@ -16,21 +16,19 @@ import time
 def main():
     ancho = ancho_terminal()
     limpiar_pantalla()
- 
-    pygame.mixer.init()
-    sonido_fondo()
+    Sonido.reproducir("Ambient type beat 2025.mp3", loop=True)
 
     print("\n")
-    texto_bloody("El enigma de la estridencia")
+    Escena("El enigma de la estridencia", formato="bloody",color="red", velocidad=0 )
     print("\n" )
 
     time.sleep(3)
 
-    texto_mediano("Bienvenido al juego") 
+    Escena("Bienvenido al juego", formato="gothic", velocidad=0) 
     time.sleep(2)
-    texto_mediano("¿Estas listo para vivir")
+    Escena("¿Estas listo para vivir", formato="gothic", velocidad=0)
     time.sleep(2)
-    texto_mediano("esta experiencia de terror")
+    Escena("esta experiencia de terror", formato="gothic", velocidad=0)
     
     time.sleep(1)
 
@@ -53,15 +51,15 @@ def main():
     
     limpiar_pantalla()
 
-    sonido_mar()
+    Sonido.reproducir("Sonido del Mar.mp3", volumen=0.08, loop=True)
 
     historia = Historia()
-    escenario_actual = "inicio"
+    escenario_actual = "Reiniciar"
 
     while True:
         escenario_actual = historia.mostrar_escenario(escenario_actual)
-        if escenario_actual == "salir":
-            print("Gracias por jugar. ¡Hasta la próxima!")
+        if escenario_actual == "Terminar":
+            print("Las mentes débiles huyen de sus miedos")
             break
 
 if __name__ == "__main__":
