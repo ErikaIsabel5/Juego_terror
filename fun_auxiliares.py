@@ -30,4 +30,7 @@ def ancho_terminal():
 #Definimos una función para limpiar la pantalla en la terminal.
 
 def limpiar_pantalla():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    if os.name == "nt":  
+        os.system("cls")
+    else:  
+        os.system("clear")
